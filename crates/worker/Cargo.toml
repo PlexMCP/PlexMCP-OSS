@@ -16,7 +16,7 @@ plexmcp-api = { path = "../api" }
 
 tokio = { workspace = true }
 reqwest = { workspace = true }
-tokio-cron-scheduler = "0.13"
+tokio-cron-scheduler = "0.15"
 serde = { workspace = true }
 serde_json = { workspace = true }
 sqlx = { workspace = true }
