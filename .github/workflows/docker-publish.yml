@@ -125,10 +125,20 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build-api, build-web]
     if: github.event_name != 'pull_request'
+    permissions:
+      contents: read
+      packages: read
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Log in to Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create test .env file
         run: |
