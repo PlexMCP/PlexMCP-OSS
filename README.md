@@ -15,7 +15,7 @@
 <p align="center">
   <a href="https://github.com/PlexMCP/PlexMCP-OSS/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-FSL--1.1--Apache--2.0-blue.svg" alt="License"></a>
   <a href="https://github.com/PlexMCP/PlexMCP-OSS/actions/workflows/docker-publish.yml"><img src="https://github.com/PlexMCP/PlexMCP-OSS/actions/workflows/docker-publish.yml/badge.svg" alt="Docker Build"></a>
-  <a href="https://discord.gg/HAYYTGnht8"><img src="https://img.shields.io/discord/1234567890?color=5865F2&logo=discord&logoColor=white&label=Discord" alt="Discord"></a>
+  <a href="https://discord.gg/HAYYTGnht8"><img src="https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white" alt="Discord"></a>
 </p>
 
 ---
