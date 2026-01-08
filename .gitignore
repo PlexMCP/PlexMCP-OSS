@@ -38,7 +38,6 @@ scripts/create-stripe-products.mjs
 # Vercel env files
 web/.env.vercel*
 # Test artifacts
-Cargo.lock
 docker-compose.override.yml
 secrets/
 web/.next/
