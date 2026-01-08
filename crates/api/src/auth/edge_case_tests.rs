@@ -8,7 +8,9 @@
 
 #[cfg(test)]
 mod session_tests {
+    #[allow(unused_imports)]
     use super::super::sessions::*;
+    #[allow(unused_imports)]
     use time::{Duration, OffsetDateTime};
     use uuid::Uuid;
 
@@ -256,6 +258,7 @@ mod totp_tests {
 #[cfg(test)]
 mod jwt_tests {
     use super::super::jwt::*;
+    #[allow(unused_imports)]
     use time::{Duration, OffsetDateTime};
     use uuid::Uuid;
 

@@ -51,7 +51,7 @@ impl TaxIdType {
         }
     }
 
-    pub fn from_str(s: &str) -> Self {
+    pub fn from_stripe_type(s: &str) -> Self {
         match s {
             "eu_vat" => TaxIdType::EuVat,
             "gb_vat" => TaxIdType::GbVat,
@@ -138,7 +138,7 @@ impl TaxService {
 
         let customer_id = customer_id
             .and_then(|(id,)| if id.is_empty() { None } else { Some(id) })
-            .ok_or_else(|| BillingError::NoCustomer)?;
+            .ok_or(BillingError::NoCustomer)?;
 
         // Create tax ID in Stripe
         // Note: Stripe's async-stripe library CreateTaxId requires manual construction
@@ -195,7 +195,7 @@ impl TaxService {
         .await
         .map_err(|e| BillingError::Database(e.to_string()))?;
 
-        let (customer_id, stripe_tax_id) =
+        let (_customer_id, stripe_tax_id) =
             record.ok_or_else(|| BillingError::NotFound("Tax ID not found".to_string()))?;
 
         // Delete from Stripe if exists
@@ -457,7 +457,7 @@ impl TaxService {
         .await
         .map_err(|e| BillingError::Database(e.to_string()))?;
 
-        let (customer_id, stripe_tax_id) =
+        let (_customer_id, stripe_tax_id) =
             record.ok_or_else(|| BillingError::NotFound("Tax ID not found".to_string()))?;
 
         let stripe_tax_id = stripe_tax_id

@@ -239,6 +239,7 @@ pub async fn list_sessions(pool: &PgPool, user_id: Uuid) -> ApiResult<Vec<UserSe
 
 #[cfg(test)]
 mod tests {
+    #[allow(unused_imports)]
     use super::*;
 
     #[test]

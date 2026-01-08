@@ -43,9 +43,9 @@ pub struct AppState {
     /// Security alerting service for real-time threat detection
     pub alert_service: AlertService,
     /// Cache for Supabase token verification results to prevent rate limiting
-    pub token_cache: TokenCache,
+    pub(crate) token_cache: TokenCache,
     /// Track in-flight Supabase verification requests for request coalescing
-    pub in_flight_requests: InFlightRequests,
+    pub(crate) in_flight_requests: InFlightRequests,
 }
 
 /// Load MaxMind GeoLite2-City database from disk

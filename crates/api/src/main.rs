@@ -1,3 +1,18 @@
+// API server clippy configuration
+#![allow(dead_code)] // Contains methods for future use
+#![allow(unused_imports)] // Contains imports for conditional/future use
+#![allow(clippy::useless_vec)]
+#![allow(clippy::single_match)]
+#![allow(clippy::needless_borrows_for_generic_args)]
+#![allow(clippy::format_in_format_args)]
+#![allow(clippy::inconsistent_digit_grouping)]
+#![allow(clippy::expect_fun_call)]
+#![allow(clippy::type_complexity)]
+#![allow(clippy::if_same_then_else)]
+#![allow(clippy::suspicious_doc_comments)]
+#![cfg_attr(test, allow(clippy::expect_used))]
+#![cfg_attr(test, allow(clippy::unwrap_used))]
+
 //! PlexMCP API Server
 //!
 //! The main API server for PlexMCP, providing authentication,

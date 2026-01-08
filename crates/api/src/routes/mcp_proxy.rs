@@ -428,6 +428,7 @@ pub struct McpFilter {
 
 /// Monthly usage limit check result (only available with billing feature)
 #[cfg(feature = "billing")]
+#[allow(dead_code)]
 struct MonthlyLimitCheck {
     /// Whether the request should be allowed
     allowed: bool,

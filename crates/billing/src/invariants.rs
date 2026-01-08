@@ -92,6 +92,7 @@ struct TierMismatchRow {
 
 /// Row type for canceled without period end violation
 #[derive(Debug, sqlx::FromRow)]
+#[allow(dead_code)]
 struct CanceledNoPeriodEndRow {
     sub_id: Uuid,
     org_id: Uuid,

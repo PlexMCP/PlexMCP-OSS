@@ -128,7 +128,7 @@ impl RefundService {
                 // Update audit record with success
                 self.complete_refund_record(
                     refund_record_id,
-                    Some(&refund.id.to_string()),
+                    Some(refund.id.as_str()),
                     "completed",
                     None,
                 )
@@ -235,9 +235,9 @@ impl RefundService {
         let charge_id = invoice
             .charge
             .as_ref()
-            .and_then(|c| match c {
-                stripe::Expandable::Id(id) => Some(id.to_string()),
-                stripe::Expandable::Object(charge) => Some(charge.id.to_string()),
+            .map(|c| match c {
+                stripe::Expandable::Id(id) => id.to_string(),
+                stripe::Expandable::Object(charge) => charge.id.to_string(),
             })
             .ok_or(BillingError::NoRefundableCharge)?;
 
@@ -450,7 +450,7 @@ mod tests {
         // With 31-day total and 10-11 days remaining: 9000 * (10/31) to (11/31) ≈ 2903-3193
         // Should be close to 3000 (within timing variance)
         assert!(
-            refund >= 2900 && refund <= 3300,
+            (2900..=3300).contains(&refund),
             "Expected refund between 2900-3300, got {}",
             refund
         );

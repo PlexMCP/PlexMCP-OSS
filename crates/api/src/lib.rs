@@ -1,3 +1,14 @@
+// API crate clippy configuration
+#![allow(clippy::useless_vec)] // Vec preferred for API response patterns
+#![allow(clippy::single_match)] // Clearer in some cases
+#![allow(clippy::needless_borrows_for_generic_args)] // Sometimes needed for clarity
+#![allow(clippy::format_in_format_args)] // Intentional in logging macros
+#![allow(clippy::inconsistent_digit_grouping)] // Epoch timestamps don't use grouping
+#![allow(clippy::expect_fun_call)] // Used for descriptive error messages
+// Test code patterns:
+#![cfg_attr(test, allow(clippy::expect_used))]
+#![cfg_attr(test, allow(clippy::unwrap_used))]
+
 //! PlexMCP API Library
 //!
 //! This crate contains the API server components for PlexMCP.

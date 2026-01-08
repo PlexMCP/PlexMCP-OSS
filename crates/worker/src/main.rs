@@ -1,3 +1,9 @@
+// Worker clippy configuration
+#![allow(dead_code)]
+#![allow(unused_imports)]
+#![allow(clippy::if_same_then_else)]
+#![allow(clippy::suspicious_doc_comments)]
+
 //! PlexMCP Background Worker
 //!
 //! Handles scheduled jobs including:

@@ -50,7 +50,7 @@ pub(crate) struct CachedSupabaseAuth {
 }
 
 /// Thread-safe token cache type (crate-internal, not part of public API)
-pub type TokenCache = Arc<RwLock<HashMap<String, CachedSupabaseAuth>>>;
+pub(crate) type TokenCache = Arc<RwLock<HashMap<String, CachedSupabaseAuth>>>;
 
 use super::{api_key::ApiKeyManager, jwt::JwtManager, password, sessions};
 
@@ -115,10 +115,10 @@ pub struct AuthState {
     pub supabase_anon_key: String,
     pub http_client: Client,
     /// Cache for Supabase token verification results to prevent rate limiting
-    pub token_cache: TokenCache,
+    pub(crate) token_cache: TokenCache,
     /// Track in-flight Supabase verification requests for request coalescing
     /// This prevents multiple parallel requests from all hitting Supabase simultaneously
-    pub in_flight_requests: InFlightRequests,
+    pub(crate) in_flight_requests: InFlightRequests,
 }
 
 /// SOC 2 CC6.1: Extract bearer token from HttpOnly cookies

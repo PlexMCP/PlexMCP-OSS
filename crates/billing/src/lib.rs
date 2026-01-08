@@ -1,3 +1,14 @@
+// Billing crate clippy configuration
+// These are intentional patterns in this crate:
+#![allow(clippy::result_large_err)] // BillingError::UseCheckoutFlow contains checkout session data
+#![allow(clippy::too_many_arguments)] // Some Stripe operations require many parameters
+#![allow(clippy::type_complexity)] // Complex return types for Stripe API wrappers
+#![allow(clippy::field_reassign_with_default)] // Used for conditional struct field setting
+// Test code patterns (expected in test files):
+#![cfg_attr(test, allow(clippy::unwrap_used))]
+#![cfg_attr(test, allow(clippy::expect_used))]
+#![cfg_attr(test, allow(clippy::absurd_extreme_comparisons))]
+
 //! PlexMCP Billing Module
 //!
 //! Handles Stripe integration for subscriptions, usage metering, and invoicing.

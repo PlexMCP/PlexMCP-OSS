@@ -2099,7 +2099,7 @@ impl WebhookHandler {
         let error_code = payment_intent
             .last_payment_error
             .as_ref()
-            .and_then(|e| e.code.clone())
+            .and_then(|e| e.code)
             .map(|c| c.to_string());
 
         tracing::error!(

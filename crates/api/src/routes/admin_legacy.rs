@@ -2974,6 +2974,7 @@ pub async fn debug_org_billing(
 // Helper row types for billing debug
 
 #[derive(Debug, FromRow)]
+#[allow(dead_code)]
 struct OrgBasicInfo {
     id: Uuid,
     name: String,

@@ -21,6 +21,7 @@ use crate::refund::RefundService;
 /// The async-stripe 0.39 library's SubscriptionItemFilter only has `plan`,
 /// but Stripe's modern API uses `price` for subscription items.
 #[derive(Clone, Debug, serde::Serialize)]
+#[allow(dead_code)]
 struct SubscriptionItemFilterWithPrice {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub id: Option<stripe::SubscriptionItemId>,
@@ -35,6 +36,7 @@ struct SubscriptionItemFilterWithPrice {
 /// Custom RetrieveUpcomingInvoice that uses SubscriptionItemFilterWithPrice
 /// This allows us to use the `price` field instead of the deprecated `plan` field
 #[derive(Clone, Debug, serde::Serialize)]
+#[allow(dead_code)]
 struct RetrieveUpcomingInvoiceWithPrice {
     pub customer: CustomerId,
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -1475,7 +1477,7 @@ impl SubscriptionService {
         // Calculate and record the prorated credit for audit purposes
         let refund_service = RefundService::new(self.stripe.clone(), self.pool.clone());
         let credit_amount: Option<i64> = match refund_service
-            .get_refundable_charge(&subscription.id.to_string())
+            .get_refundable_charge(subscription.id.as_str())
             .await
         {
             Ok(charge) => {
@@ -2016,6 +2018,7 @@ impl SubscriptionService {
         // If the claim succeeds (returns a row), we have exclusive processing rights
         // If it returns None, the downgrade was cancelled or already claimed
         #[derive(sqlx::FromRow)]
+        #[allow(dead_code)]
         struct ClaimedDowngrade {
             scheduled_downgrade_tier: String,
             admin_downgrade_scheduled: Option<bool>,

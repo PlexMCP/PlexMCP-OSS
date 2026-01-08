@@ -1,3 +1,8 @@
+// Test file - these are expected patterns in test code
+#![allow(clippy::unwrap_used)]
+#![allow(clippy::expect_used)]
+#![allow(clippy::absurd_extreme_comparisons)]
+
 //! Edge Case Tests for Billing System
 //!
 //! Tests critical boundary conditions and race conditions in:

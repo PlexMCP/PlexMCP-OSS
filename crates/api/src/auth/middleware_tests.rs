@@ -8,6 +8,7 @@
 //! - Member suspension checks
 
 #[cfg(test)]
+#[allow(dead_code)]
 mod tests {
     use super::super::api_key::ApiKeyManager;
     use super::super::jwt::JwtManager;
