@@ -153,7 +153,7 @@ token = generate_plexmcp_token(
 Include the JWT in the Authorization header:
 
 ```bash
-curl -X POST https://api.plexmcp.com/v1/mcp/invoke \
+curl -X POST https://api.plexmcp.com/mcp \
   -H "Authorization: Bearer eyJhbG..." \
   -H "Content-Type: application/json" \
   -d '{...}'

@@ -114,10 +114,11 @@ GET /v1/mcps/{mcp_id}
 
 ## Invoke MCP Tool
 
-Call a tool on an MCP.
+Call a tool on an MCP. This is the primary endpoint for interacting with your MCPs.
 
 ```http
-POST /v1/mcp/invoke
+POST /mcp
+Content-Type: application/json
 ```
 
 ### Request Body
@@ -151,45 +152,6 @@ POST /v1/mcp/invoke
       "latency_ms": 125,
       "timestamp": "2024-01-20T15:45:00Z"
     }
-  }
-}
-```
-
-## Read MCP Resources
-
-Read resources exposed by an MCP.
-
-```http
-POST /v1/mcp/resources
-```
-
-### Request Body
-
-```json
-{
-  "mcp_id": "mcp_123",
-  "uri": "weather://locations"
-}
-```
-
-### Response
-
-```json
-{
-  "success": true,
-  "data": {
-    "contents": [
-      {
-        "uri": "weather://locations/sf",
-        "name": "San Francisco",
-        "mimeType": "application/json"
-      },
-      {
-        "uri": "weather://locations/nyc",
-        "name": "New York City",
-        "mimeType": "application/json"
-      }
-    ]
   }
 }
 ```

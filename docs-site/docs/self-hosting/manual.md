@@ -113,7 +113,7 @@ bind 127.0.0.1
 ### Clone Repository
 
 ```bash
-git clone https://github.com/PlexMCP/plexmcp.git
+git clone https://github.com/PlexMCP/PlexMCP-OSS.git
 cd plexmcp
 ```
 

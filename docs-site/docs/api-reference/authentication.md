@@ -20,33 +20,26 @@ Include your API key in the `Authorization` header:
 
 ```bash
 curl -X GET https://api.plexmcp.com/v1/mcps \
-  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Authorization: ApiKey YOUR_API_KEY"
 ```
 
 ### Header Format
 
 ```
-Authorization: Bearer pk_live_xxxxxxxxxxxxxxxxxxxxx
+Authorization: ApiKey pmcp_xxxxxxxxxxxxxxxxxxxxx
 ```
 
-- **Prefix**: Always `Bearer` (with space)
-- **Key format**: Starts with `pk_live_` (production) or `pk_test_` (test)
+- **Prefix**: Always `ApiKey` (with space) for API keys
+- **Key format**: Starts with `pmcp_` prefix
 
 ## Key Types
 
-### Live Keys (`pk_live_`)
+All API keys use the `pmcp_` prefix and work across all environments:
 
-Production keys for real API calls:
 - Count toward usage limits
 - Use in production applications
 - Never expose in client-side code
-
-### Test Keys (`pk_test_`)
-
-For development and testing:
-- Limited to test MCPs
-- Don't count toward billing
-- Safe for development environments
+- Separate keys recommended for development vs production
 
 ## Getting Your API Key
 
@@ -127,7 +120,7 @@ Causes:
 
 ```javascript
 // BAD - Don't do this!
-const apiKey = "pk_live_xxxxx";
+const apiKey = "pmcp_xxxxx";
 
 // GOOD - Use environment variables
 const apiKey = process.env.PLEXMCP_API_KEY;
@@ -137,7 +130,7 @@ const apiKey = process.env.PLEXMCP_API_KEY;
 
 ```bash
 # .env file (not committed to git)
-PLEXMCP_API_KEY=pk_live_xxxxx
+PLEXMCP_API_KEY=pmcp_xxxxx
 
 # In your code
 const apiKey = process.env.PLEXMCP_API_KEY;
@@ -192,10 +185,10 @@ client = PlexMCP(api_key=os.environ["PLEXMCP_API_KEY"])
 ### cURL
 
 ```bash
-export PLEXMCP_API_KEY="pk_live_xxxxx"
+export PLEXMCP_API_KEY="pmcp_xxxxx"
 
 curl -X GET https://api.plexmcp.com/v1/mcps \
-  -H "Authorization: Bearer $PLEXMCP_API_KEY"
+  -H "Authorization: ApiKey $PLEXMCP_API_KEY"
 ```
 
 ### Go
@@ -205,7 +198,7 @@ package main
 
 import (
     "os"
-    "github.com/plexmcp/plexmcp-go"
+    "github.com/PlexMCP/PlexMCP-OSS-go"
 )
 
 func main() {
@@ -219,7 +212,7 @@ func main() {
 
 1. Verify the complete key was copied
 2. Check for trailing whitespace
-3. Ensure `Bearer ` prefix is present
+3. Ensure `ApiKey ` prefix is present
 4. Verify the key hasn't been revoked
 
 ### Key Works in cURL but Not in Code

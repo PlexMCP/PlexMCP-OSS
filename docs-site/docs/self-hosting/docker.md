@@ -18,7 +18,7 @@ This guide walks you through deploying PlexMCP using Docker Compose.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/PlexMCP/plexmcp.git
+git clone https://github.com/PlexMCP/PlexMCP-OSS.git
 cd plexmcp
 ```
 

@@ -10,9 +10,10 @@ The PlexMCP API lets you programmatically interact with your MCPs, manage resour
 
 All API requests use the following base URL:
 
-```
-https://api.plexmcp.com/v1
-```
+- **Self-hosted:** `http://localhost:8080` (or your server address)
+- **PlexMCP Cloud:** `https://api.plexmcp.com`
+
+Examples in this documentation use the Cloud URL. Replace with your self-hosted URL as needed.
 
 ## Authentication
 
@@ -20,7 +21,7 @@ All API requests require authentication via API key:
 
 ```bash
 curl -X GET https://api.plexmcp.com/v1/mcps \
-  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Authorization: ApiKey YOUR_API_KEY"
 ```
 
 See [Authentication](/api-reference/authentication) for details.
@@ -31,7 +32,7 @@ See [Authentication](/api-reference/authentication) for details.
 
 | Header | Required | Description |
 |--------|----------|-------------|
-| `Authorization` | Yes | `Bearer YOUR_API_KEY` |
+| `Authorization` | Yes | `ApiKey YOUR_API_KEY` |
 | `Content-Type` | Yes* | `application/json` for POST/PUT |
 | `Accept` | No | `application/json` (default) |
 
@@ -40,8 +41,8 @@ See [Authentication](/api-reference/authentication) for details.
 For POST and PUT requests, send JSON:
 
 ```bash
-curl -X POST https://api.plexmcp.com/v1/mcp/invoke \
-  -H "Authorization: Bearer YOUR_API_KEY" \
+curl -X POST https://api.plexmcp.com/mcp \
+  -H "Authorization: ApiKey YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "mcp_id": "mcp_123",
@@ -120,7 +121,7 @@ Response includes pagination metadata:
 
 ## Rate Limits
 
-Rate limits vary by plan:
+Rate limits vary by plan (PlexMCP Cloud only):
 
 | Plan | Requests/second |
 |------|-----------------|
@@ -128,10 +129,7 @@ Rate limits vary by plan:
 | Pro | 100 |
 | Team | 1,000 |
 
-Rate limit headers:
-- `X-RateLimit-Limit`: Max requests per window
-- `X-RateLimit-Remaining`: Requests remaining
-- `X-RateLimit-Reset`: Unix timestamp when limit resets
+Self-hosted deployments with `PLEXMCP_SELF_HOSTED=true` have no rate limits.
 
 ## API Endpoints
 
@@ -141,8 +139,7 @@ Rate limit headers:
 |--------|----------|-------------|
 | GET | `/v1/mcps` | List all MCPs |
 | GET | `/v1/mcps/{id}` | Get MCP details |
-| POST | `/v1/mcp/invoke` | Invoke an MCP tool |
-| POST | `/v1/mcp/resources` | Read MCP resources |
+| POST | `/mcp` | Invoke an MCP tool |
 
 ### Organization
 
@@ -168,22 +165,27 @@ Rate limit headers:
 
 ## SDKs
 
-Official SDKs are coming soon:
+:::note SDKs (Planned)
+Official SDKs are under development and will be released incrementally.
+For now, use the REST API directly with your HTTP client of choice.
+:::
+
+Planned SDKs:
 
 - **TypeScript/JavaScript**: `@plexmcp/sdk` (npm)
 - **Python**: `plexmcp` (PyPI)
 - **Go**: `plexmcp-go` (GitHub)
 
-For now, use the REST API directly with cURL or your HTTP client of choice:
+REST API example:
 
 ```bash
 # List MCPs
 curl -X GET https://api.plexmcp.com/v1/mcps \
-  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Authorization: ApiKey YOUR_API_KEY"
 
 # Invoke a tool
-curl -X POST https://api.plexmcp.com/v1/mcp/invoke \
-  -H "Authorization: Bearer YOUR_API_KEY" \
+curl -X POST https://api.plexmcp.com/mcp \
+  -H "Authorization: ApiKey YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "mcp_id": "mcp_123",
@@ -204,5 +206,5 @@ Breaking changes:
 ## Support
 
 - **API Status**: [status.plexmcp.com](https://status.plexmcp.com)
-- **Documentation Issues**: [GitHub](https://github.com/PlexMCP/plexmcp/issues)
+- **Documentation Issues**: [GitHub](https://github.com/PlexMCP/PlexMCP-OSS/issues)
 - **Support Email**: support@plexmcp.com

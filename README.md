@@ -63,6 +63,8 @@ The fastest way to get started is with [PlexMCP Cloud](https://plexmcp.com) - ou
 
 ## Documentation
 
+**Docs are verified against implementation.** See [`/docs-site`](./docs-site) and [Documentation Accuracy](https://oss.plexmcp.com/intro#documentation-accuracy).
+
 - [Getting Started](https://oss.plexmcp.com/getting-started/quickstart) - Quick start guide
 - [Self-Hosting](https://oss.plexmcp.com/self-hosting) - Deploy on your infrastructure
 - [API Reference](https://oss.plexmcp.com/api-reference/overview) - REST API documentation

@@ -58,5 +58,14 @@ PlexMCP is open source! If you prefer to self-host, check out our [open source d
 ## Need Help?
 
 - **Documentation**: You're already here!
-- **GitHub Discussions**: [Community support](https://github.com/PlexMCP/plexmcp/discussions)
+- **GitHub Discussions**: [Community support](https://github.com/PlexMCP/PlexMCP-OSS/discussions)
 - **Email Support**: support@plexmcp.com (Pro and Team plans)
+
+## Documentation Accuracy
+
+These docs are validated against the current implementation. If you find any mismatch between documentation and actual behavior, please [open an issue](https://github.com/PlexMCP/PlexMCP-OSS/issues) with:
+
+- The specific endpoint or example that failed
+- Expected behavior (from docs)
+- Actual behavior (from server)
+- Server version (if known)

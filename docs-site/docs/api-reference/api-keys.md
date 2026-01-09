@@ -32,7 +32,7 @@ GET /v1/api-keys
       "id": "key_123",
       "name": "Production Server",
       "description": "Main production API key",
-      "prefix": "pk_live_abc",
+      "prefix": "pmcp_abc",
       "status": "active",
       "created_at": "2024-01-15T10:30:00Z",
       "last_used": "2024-01-20T15:45:00Z",
@@ -72,7 +72,7 @@ GET /v1/api-keys/{key_id}
     "id": "key_123",
     "name": "Production Server",
     "description": "Main production API key",
-    "prefix": "pk_live_abc",
+    "prefix": "pmcp_abc",
     "status": "active",
     "created_at": "2024-01-15T10:30:00Z",
     "created_by": {
@@ -151,8 +151,8 @@ POST /v1/api-keys
   "data": {
     "id": "key_789",
     "name": "Development Key",
-    "key": "pk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    "prefix": "pk_live_xxx",
+    "key": "pmcp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "prefix": "pmcp_xxx",
     "status": "active",
     "created_at": "2024-01-20T16:00:00Z",
     "expires_at": "2024-06-15T00:00:00Z",

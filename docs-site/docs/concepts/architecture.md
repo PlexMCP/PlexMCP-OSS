@@ -153,7 +153,11 @@ Client Request
 
 ## Regional Infrastructure
 
-PlexMCP runs on a global edge network:
+:::note PlexMCP Cloud only
+Multi-region infrastructure is available on PlexMCP Cloud (hosted). Self-hosted deployments run on your own infrastructure.
+:::
+
+PlexMCP Cloud runs on a global edge network:
 
 | Region | Location | Purpose |
 |--------|----------|---------|
@@ -165,6 +169,10 @@ PlexMCP runs on a global edge network:
 Requests are routed to the nearest healthy region.
 
 ## High Availability
+
+:::note PlexMCP Cloud only
+SLA guarantees apply to PlexMCP Cloud only. Self-hosted uptime depends on your infrastructure.
+:::
 
 ### Uptime Guarantee
 

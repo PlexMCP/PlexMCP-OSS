@@ -60,7 +60,7 @@ Any MCP that implements the standard protocol can be registered with PlexMCP, in
 Use API keys in the Authorization header:
 
 ```bash
-curl -H "Authorization: Bearer pk_live_xxxxx" https://api.plexmcp.com/v1/mcps
+curl -H "Authorization: ApiKey pmcp_xxxxx" https://api.plexmcp.com/v1/mcps
 ```
 
 ### What's the API base URL?
@@ -74,7 +74,7 @@ https://api.plexmcp.com/v1
 Yes! Official SDKs for:
 - TypeScript/JavaScript: `npm install @plexmcp/sdk`
 - Python: `pip install plexmcp`
-- Go: `go get github.com/plexmcp/plexmcp-go`
+- Go: `go get github.com/PlexMCP/PlexMCP-OSS-go`
 
 ### How do I connect Claude Desktop?
 
@@ -87,7 +87,7 @@ Add PlexMCP to your Claude Desktop config:
       "command": "npx",
       "args": ["-y", "@plexmcp/client"],
       "env": {
-        "PLEXMCP_API_KEY": "pk_live_xxxxx"
+        "PLEXMCP_API_KEY": "pmcp_xxxxx"
       }
     }
   }
@@ -156,7 +156,7 @@ Audit logs are available on Team and Enterprise plans, with configurable retenti
 1. Verify the complete key was copied
 2. Check the key hasn't been revoked
 3. Ensure it hasn't expired
-4. Confirm you're using `Bearer` prefix
+4. Confirm you're using `ApiKey` prefix
 
 ### Requests are slow
 
@@ -195,6 +195,6 @@ Yes. Enterprise includes support for self-hosted deployments.
 ## Still Have Questions?
 
 - **Documentation**: You're here!
-- **Community**: [GitHub Discussions](https://github.com/PlexMCP/plexmcp/discussions)
+- **Community**: [GitHub Discussions](https://github.com/PlexMCP/PlexMCP-OSS/discussions)
 - **Email**: [support@plexmcp.com](mailto:support@plexmcp.com)
 - **Sales**: [sales@plexmcp.com](mailto:sales@plexmcp.com)

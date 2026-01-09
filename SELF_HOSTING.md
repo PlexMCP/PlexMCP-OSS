@@ -10,7 +10,7 @@ The fastest way to get started with pre-built multi-architecture images:
 
 ```bash
 # Clone the repository
-git clone https://github.com/plexmcp/plexmcp.git
+git clone https://github.com/PlexMCP/PlexMCP-OSS.git
 cd plexmcp
 
 # Run setup to generate secrets and create .env
@@ -31,7 +31,7 @@ If you want to build the images yourself:
 
 ```bash
 # Clone the repository
-git clone https://github.com/plexmcp/plexmcp.git
+git clone https://github.com/PlexMCP/PlexMCP-OSS.git
 cd plexmcp
 
 # Run setup
@@ -315,8 +315,8 @@ docker compose --profile prebuilt up -d
 ## Support
 
 - **Documentation**: https://docs.plexmcp.com
-- **GitHub Issues**: https://github.com/plexmcp/plexmcp/issues
-- **Discussions**: https://github.com/plexmcp/plexmcp/discussions
+- **GitHub Issues**: https://github.com/PlexMCP/PlexMCP-OSS/issues
+- **Discussions**: https://github.com/PlexMCP/PlexMCP-OSS/discussions
 
 ## License
 

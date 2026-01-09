@@ -59,7 +59,7 @@ Click **Create MCP** to add it to your organization.
 
 ```bash
 curl -X POST "https://api.plexmcp.com/v1/mcps" \
-  -H "Authorization: Bearer $PLEXMCP_API_KEY" \
+  -H "Authorization: ApiKey $PLEXMCP_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "name": "Weather API",

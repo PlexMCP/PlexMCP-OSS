@@ -40,8 +40,8 @@ Your API key is only shown once. Copy it before closing the dialog.
 Include the key in the Authorization header:
 
 ```bash
-curl -X POST https://api.plexmcp.com/v1/mcp/invoke \
-  -H "Authorization: Bearer pk_live_xxxxxxxx" \
+curl -X POST https://api.plexmcp.com/mcp \
+  -H "Authorization: ApiKey pmcp_xxxxxxxx" \
   -H "Content-Type: application/json" \
   -d '{...}'
 ```
@@ -52,7 +52,7 @@ curl -X POST https://api.plexmcp.com/v1/mcp/invoke \
 import { PlexMCP } from '@plexmcp/sdk';
 
 const client = new PlexMCP({
-  apiKey: 'pk_live_xxxxxxxx'
+  apiKey: 'pmcp_xxxxxxxx'
 });
 ```
 
@@ -62,7 +62,7 @@ Best practice is to use environment variables:
 
 ```bash
 # .env file
-PLEXMCP_API_KEY=pk_live_xxxxxxxx
+PLEXMCP_API_KEY=pmcp_xxxxxxxx
 ```
 
 ```typescript
@@ -110,7 +110,7 @@ Never hardcode keys:
 
 ```typescript
 // Bad
-const apiKey = "pk_live_xxxxx";
+const apiKey = "pmcp_xxxxx";
 
 // Good
 const apiKey = process.env.PLEXMCP_API_KEY;
@@ -175,7 +175,7 @@ The key stops working immediately.
 - Wrong key format
 - Key revoked or expired
 
-**Fix**: Verify the complete key is included with `Bearer` prefix.
+**Fix**: Verify the complete key is included with `ApiKey` prefix.
 
 ### Key Not Working
 

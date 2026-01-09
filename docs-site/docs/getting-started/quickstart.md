@@ -56,8 +56,8 @@ Don't have an MCP ready? Check out our [SDK examples](/guides/integrations/sdk-e
 Use your API key to call an MCP through PlexMCP:
 
 ```bash
-curl -X POST https://api.plexmcp.com/v1/mcp/invoke \
-  -H "Authorization: Bearer YOUR_API_KEY" \
+curl -X POST https://api.plexmcp.com/mcp \
+  -H "Authorization: ApiKey YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "mcp_id": "your-mcp-id",
@@ -65,6 +65,8 @@ curl -X POST https://api.plexmcp.com/v1/mcp/invoke \
     "arguments": {}
   }'
 ```
+
+See [MCP API Reference](/api-reference/mcps#invoke-mcp-tool) for full request/response details.
 
 Or configure Claude Desktop to use PlexMCP:
 

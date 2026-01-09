@@ -177,7 +177,7 @@ If you wish to test for vulnerabilities, please:
 
 We publish security advisories at:
 
-- **GitHub Security Advisories:** https://github.com/plexmcp/plexmcp/security/advisories
+- **GitHub Security Advisories:** https://github.com/PlexMCP/PlexMCP-OSS/security/advisories
 - **Website:** https://plexmcp.com/security/advisories
 - **Email List:** Subscribe at security-announce@plexmcp.com
 

@@ -20,7 +20,7 @@ Get PlexMCP running in under 5 minutes:
 
 ```bash
 # Clone the repository
-git clone https://github.com/PlexMCP/plexmcp.git
+git clone https://github.com/PlexMCP/PlexMCP-OSS.git
 cd plexmcp
 
 # Run the setup script
@@ -106,16 +106,16 @@ See [Requirements](./requirements.md) for detailed specifications.
 ## Getting Help
 
 - **Documentation**: You're here!
-- **GitHub Issues**: [Report bugs](https://github.com/PlexMCP/plexmcp/issues)
-- **GitHub Discussions**: [Ask questions](https://github.com/PlexMCP/plexmcp/discussions)
+- **GitHub Issues**: [Report bugs](https://github.com/PlexMCP/PlexMCP-OSS/issues)
+- **GitHub Discussions**: [Ask questions](https://github.com/PlexMCP/PlexMCP-OSS/discussions)
 - **Discord**: [Join our community](https://discord.gg/HAYYTGnht8)
 
 ## License
 
-PlexMCP is licensed under [FSL-1.1-Apache-2.0](https://github.com/PlexMCP/plexmcp/blob/main/LICENSE).
+PlexMCP is licensed under [FSL-1.1-Apache-2.0](https://github.com/PlexMCP/PlexMCP-OSS/blob/main/LICENSE).
 
 - **Free for**: Individuals, businesses under $1M revenue, self-hosting
 - **Commercial license required for**: Businesses with $1M+ revenue
 - **Converts to Apache 2.0**: January 2031
 
-See [Commercial License](https://github.com/PlexMCP/plexmcp/blob/main/COMMERCIAL_LICENSE.md) for details.
+See [Commercial License](https://github.com/PlexMCP/PlexMCP-OSS/blob/main/COMMERCIAL_LICENSE.md) for details.

@@ -4,6 +4,10 @@ sidebar_position: 5
 
 # Billing & Subscription
 
+:::note PlexMCP Cloud only
+Billing and subscriptions apply to PlexMCP Cloud (hosted). Self-hosted deployments have no usage limits or subscription fees.
+:::
+
 Manage your PlexMCP subscription, view usage, and update payment methods.
 
 ## Subscription Plans

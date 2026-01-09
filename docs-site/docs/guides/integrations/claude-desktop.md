@@ -46,7 +46,7 @@ Add the PlexMCP configuration:
       "command": "npx",
       "args": ["-y", "@plexmcp/client"],
       "env": {
-        "PLEXMCP_API_KEY": "pk_live_your_api_key_here"
+        "PLEXMCP_API_KEY": "pmcp_your_api_key_here"
       }
     }
   }
@@ -72,7 +72,7 @@ In Claude Desktop, you should now see tools from your PlexMCP MCPs available.
       "command": "npx",
       "args": ["-y", "@plexmcp/client"],
       "env": {
-        "PLEXMCP_API_KEY": "pk_live_xxxxx"
+        "PLEXMCP_API_KEY": "pmcp_xxxxx"
       }
     }
   }
@@ -90,7 +90,7 @@ For self-hosted or custom domains:
       "command": "npx",
       "args": ["-y", "@plexmcp/client"],
       "env": {
-        "PLEXMCP_API_KEY": "pk_live_xxxxx",
+        "PLEXMCP_API_KEY": "pmcp_xxxxx",
         "PLEXMCP_API_URL": "https://api.yourcompany.com"
       }
     }
@@ -109,14 +109,14 @@ Connect multiple organizations:
       "command": "npx",
       "args": ["-y", "@plexmcp/client"],
       "env": {
-        "PLEXMCP_API_KEY": "pk_live_work_key"
+        "PLEXMCP_API_KEY": "pmcp_work_key"
       }
     },
     "plexmcp-personal": {
       "command": "npx",
       "args": ["-y", "@plexmcp/client"],
       "env": {
-        "PLEXMCP_API_KEY": "pk_live_personal_key"
+        "PLEXMCP_API_KEY": "pmcp_personal_key"
       }
     }
   }
@@ -161,7 +161,7 @@ Claude will use the PlexMCP gateway to access your weather MCP.
 
 ```bash
 curl -X GET https://api.plexmcp.com/v1/mcps \
-  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Authorization: ApiKey YOUR_API_KEY"
 ```
 
 ### Permission Denied
@@ -205,7 +205,7 @@ Enable verbose logging:
       "command": "npx",
       "args": ["-y", "@plexmcp/client"],
       "env": {
-        "PLEXMCP_API_KEY": "pk_live_xxxxx",
+        "PLEXMCP_API_KEY": "pmcp_xxxxx",
         "PLEXMCP_DEBUG": "true"
       }
     }

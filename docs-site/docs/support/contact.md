@@ -12,7 +12,7 @@ How to get help with PlexMCP.
 
 Best for general questions and community discussions:
 
-- **GitHub Discussions**: [github.com/PlexMCP/plexmcp/discussions](https://github.com/PlexMCP/plexmcp/discussions)
+- **GitHub Discussions**: [github.com/PlexMCP/PlexMCP-OSS/discussions](https://github.com/PlexMCP/PlexMCP-OSS/discussions)
 - **GitHub Issues**: For bug reports and feature requests
 - **Documentation**: You're reading it!
 
@@ -161,7 +161,7 @@ Comprehensive guides and reference:
 
 Join the PlexMCP community:
 
-- **GitHub**: [github.com/PlexMCP/plexmcp](https://github.com/PlexMCP/plexmcp)
+- **GitHub**: [github.com/PlexMCP/PlexMCP-OSS](https://github.com/PlexMCP/PlexMCP-OSS)
 - **Discussions**: Share ideas and get help
 - **Issues**: Report bugs and request features
 - **Contributing**: We welcome contributions!

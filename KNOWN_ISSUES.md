@@ -33,7 +33,7 @@ vercel inspect <deployment-url> --logs
 
 **Prevention**:
 1. Check Vercel → Project Settings → Git Integration
-2. Verify GitHub webhook is active: https://github.com/PlexMCP/plexmcp/settings/hooks
+2. Verify GitHub webhook is active: https://github.com/PlexMCP/PlexMCP-OSS/settings/hooks
 3. Test auto-deploy by pushing a small change to a test file
 4. Add deployment status badge to README (optional)
 

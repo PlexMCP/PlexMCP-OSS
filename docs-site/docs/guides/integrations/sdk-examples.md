@@ -4,9 +4,14 @@ sidebar_position: 2
 
 # SDK Examples
 
+:::note SDKs (Planned)
+Official SDKs are under development and will be released incrementally.
+The examples below show the planned SDK interface. For now, use the REST API directly with your HTTP client of choice. See the [cURL Examples](#curl) section at the bottom for working examples.
+:::
+
 Code examples for integrating PlexMCP into your applications.
 
-## Official SDKs
+## Planned SDKs
 
 - **TypeScript/JavaScript**: `npm install @plexmcp/sdk`
 - **Python**: `pip install plexmcp`
@@ -170,7 +175,7 @@ except PlexMCPError as e:
 ### Installation
 
 ```bash
-go get github.com/plexmcp/plexmcp-go
+go get github.com/PlexMCP/PlexMCP-OSS-go
 ```
 
 ### Basic Usage
@@ -183,7 +188,7 @@ import (
     "fmt"
     "os"
 
-    "github.com/plexmcp/plexmcp-go"
+    "github.com/PlexMCP/PlexMCP-OSS-go"
 )
 
 func main() {
@@ -243,14 +248,14 @@ if err != nil {
 
 ```bash
 curl -X GET "https://api.plexmcp.com/v1/mcps" \
-  -H "Authorization: Bearer $PLEXMCP_API_KEY"
+  -H "Authorization: ApiKey $PLEXMCP_API_KEY"
 ```
 
 ### Invoke Tool
 
 ```bash
-curl -X POST "https://api.plexmcp.com/v1/mcp/invoke" \
-  -H "Authorization: Bearer $PLEXMCP_API_KEY" \
+curl -X POST "https://api.plexmcp.com/mcp" \
+  -H "Authorization: ApiKey $PLEXMCP_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "mcp_id": "mcp_123",
@@ -264,8 +269,8 @@ curl -X POST "https://api.plexmcp.com/v1/mcp/invoke" \
 ### With jq for Pretty Output
 
 ```bash
-curl -s -X POST "https://api.plexmcp.com/v1/mcp/invoke" \
-  -H "Authorization: Bearer $PLEXMCP_API_KEY" \
+curl -s -X POST "https://api.plexmcp.com/mcp" \
+  -H "Authorization: ApiKey $PLEXMCP_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "mcp_id": "mcp_123",

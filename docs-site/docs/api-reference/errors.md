@@ -151,14 +151,10 @@ All errors follow a consistent format:
   "message": "Too many requests"
 }
 ```
-**Cause**: Exceeded requests per second limit
+**Cause**: Exceeded requests per second limit (PlexMCP Cloud only)
 **Fix**: Implement retry with exponential backoff
 
-Headers included:
-- `X-RateLimit-Limit`: Max requests per window
-- `X-RateLimit-Remaining`: Requests remaining
-- `X-RateLimit-Reset`: When limit resets (Unix timestamp)
-- `Retry-After`: Seconds to wait before retrying
+The `Retry-After` header indicates seconds to wait before retrying.
 
 ### Usage Limit Errors
 
@@ -297,4 +293,4 @@ async function retryWithBackoff(fn, maxRetries = 3) {
 2. **Review details field**: Contains field-specific validation errors
 3. **Check headers**: Rate limit headers show remaining quota
 4. **Enable logging**: Log full responses during development
-5. **Use test keys**: Test with pk_test_ keys in development
+5. **Use separate keys**: Use dedicated API keys for development environments

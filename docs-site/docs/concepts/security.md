@@ -31,12 +31,14 @@ Primary authentication mechanism:
 ### Key Format
 
 ```
-pk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-│  │    │
-│  │    └── 32 random characters
-│  └─────── Environment (live/test)
-└────────── Prefix for identification
+pmcp_01<uuid><random><signature>
+│    │ │
+│    │ └── Opaque payload (do not parse)
+│    └─── Version number
+└──────── PlexMCP prefix
 ```
+
+API keys are opaque tokens. Do not attempt to parse or decode them.
 
 ### Best Practices
 

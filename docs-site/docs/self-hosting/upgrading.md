@@ -17,7 +17,7 @@ Always read the release notes before upgrading:
 curl -s https://api.github.com/repos/PlexMCP/plexmcp/releases/latest | jq '.tag_name, .body'
 ```
 
-Or visit: https://github.com/PlexMCP/plexmcp/releases
+Or visit: https://github.com/PlexMCP/PlexMCP-OSS/releases
 
 ### 2. Backup Your Data
 

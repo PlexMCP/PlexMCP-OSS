@@ -272,7 +272,7 @@ For additional security, use the manual backup script (`scripts/backup-database.
 
 ### Code Repository
 
-**Primary:** GitHub repository at `https://github.com/plexmcp/plexmcp`
+**Primary:** GitHub repository at `https://github.com/PlexMCP/PlexMCP-OSS`
 
 **Backup Strategy:**
 1. All code commits automatically backed up to GitHub
@@ -283,7 +283,7 @@ For additional security, use the manual backup script (`scripts/backup-database.
 **Recovery Procedure:**
 ```bash
 # Clone repository
-git clone https://github.com/plexmcp/plexmcp.git
+git clone https://github.com/PlexMCP/PlexMCP-OSS.git
 cd plexmcp
 
 # Checkout specific production release

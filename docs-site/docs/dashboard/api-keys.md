@@ -50,8 +50,8 @@ Select individual MCPs. The key can only access those you choose.
 Include your API key in the `Authorization` header:
 
 ```bash
-curl -X POST https://api.plexmcp.com/v1/mcp/invoke \
-  -H "Authorization: Bearer YOUR_API_KEY" \
+curl -X POST https://api.plexmcp.com/mcp \
+  -H "Authorization: ApiKey YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"mcp_id": "...", "tool": "...", "arguments": {}}'
 ```
@@ -59,10 +59,10 @@ curl -X POST https://api.plexmcp.com/v1/mcp/invoke \
 Or in code:
 
 ```typescript
-const response = await fetch('https://api.plexmcp.com/v1/mcp/invoke', {
+const response = await fetch('https://api.plexmcp.com/mcp', {
   method: 'POST',
   headers: {
-    'Authorization': `Bearer ${apiKey}`,
+    'Authorization': `ApiKey ${apiKey}`,
     'Content-Type': 'application/json',
   },
   body: JSON.stringify({
@@ -141,7 +141,7 @@ Use environment variables instead:
 
 ```bash
 # .env (not committed)
-PLEXMCP_API_KEY=pk_live_...
+PLEXMCP_API_KEY=pmcp_...
 
 # In your code
 const apiKey = process.env.PLEXMCP_API_KEY;
@@ -160,9 +160,10 @@ Based on your plan:
 
 | Plan | API Keys |
 |------|----------|
-| Free | 2 |
-| Pro | 10 |
-| Team | Unlimited |
+| Free | 5 |
+| Pro | 20 |
+| Team | 50 |
+| Enterprise | Unlimited |
 
 ## Troubleshooting
 

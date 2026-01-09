@@ -297,7 +297,7 @@ Affected Users: ~1,000 (15% of active users)
 Started: 2026-01-01 14:30 UTC
 Status: Investigating
 
-Incident Link: https://github.com/plexmcp/plexmcp/issues/1234
+Incident Link: https://github.com/PlexMCP/PlexMCP-OSS/issues/1234
 ```
 
 ---
@@ -650,7 +650,7 @@ Increased traffic caused connection pool exhaustion.
 
 ## Appendix
 
-- Incident ticket: https://github.com/plexmcp/plexmcp/issues/1234
+- Incident ticket: https://github.com/PlexMCP/PlexMCP-OSS/issues/1234
 - Slack war room: #incident-2026-01-01-api
 - Monitoring dashboard: [link]
 - Code changes: [PR #567, PR #568]

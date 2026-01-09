@@ -25,8 +25,8 @@ Benefits:
 ### API Request
 
 ```bash
-curl -X POST "https://api.plexmcp.com/v1/mcp/invoke" \
-  -H "Authorization: Bearer $PLEXMCP_API_KEY" \
+curl -X POST "https://api.plexmcp.com/mcp" \
+  -H "Authorization: ApiKey $PLEXMCP_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "mcp_id": "mcp_weather123",
@@ -36,6 +36,8 @@ curl -X POST "https://api.plexmcp.com/v1/mcp/invoke" \
     }
   }'
 ```
+
+See [MCP API Reference](/api-reference/mcps#invoke-mcp-tool) for full request/response format.
 
 ### Response
 
@@ -124,7 +126,7 @@ Get tools for a specific MCP:
 
 ```bash
 curl -X GET "https://api.plexmcp.com/v1/mcps/mcp_weather123" \
-  -H "Authorization: Bearer $PLEXMCP_API_KEY"
+  -H "Authorization: ApiKey $PLEXMCP_API_KEY"
 ```
 
 Response includes tool definitions:
@@ -218,8 +220,8 @@ try {
 For long-running tools:
 
 ```bash
-curl -X POST "https://api.plexmcp.com/v1/mcp/invoke" \
-  -H "Authorization: Bearer $PLEXMCP_API_KEY" \
+curl -X POST "https://api.plexmcp.com/mcp" \
+  -H "Authorization: ApiKey $PLEXMCP_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "mcp_id": "mcp_reports",

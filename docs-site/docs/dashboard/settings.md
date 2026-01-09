@@ -135,8 +135,8 @@ Use your own domain for API calls:
 Once verified, use your domain for API calls:
 
 ```bash
-curl -X POST https://api.yourcompany.com/v1/mcp/invoke \
-  -H "Authorization: Bearer YOUR_API_KEY" \
+curl -X POST https://api.yourcompany.com/mcp \
+  -H "Authorization: ApiKey YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{...}'
 ```
