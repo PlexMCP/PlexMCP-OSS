@@ -48,7 +48,7 @@
     "react": "19.2.0",
     "react-day-picker": "^9.12.0",
     "react-dom": "19.2.0",
-    "react-hook-form": "^7.67.0",
+    "react-hook-form": "^7.70.0",
     "react-simple-maps": "^3.0.0",
     "react-tooltip": "^5.30.0",
     "recharts": "^2.15.4",
